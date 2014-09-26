@@ -34,26 +34,16 @@
 
 	<!-- BEGIN PAGE WRAPPER-->
  
-	<div id="page-wrapper">
+	<div id="page-wrapper" class="container-fluid fill">
  
  
 		<!-- BEGIN HEADER -->
 	
-		<div id="header">
-	
-	
-			<!-- BEGIN LOGO -->
-		
-			<<?php if($gp_settings['title'] == "Show") { ?>div<?php } else { ?>h1<?php } ?> id="logo" style="<?php if(get_option($dirname.'_logo_top')) { ?> margin-top: <?php echo get_option($dirname.'_logo_top'); ?>px;<?php } ?><?php if(get_option($dirname.'_logo_right')) { ?> margin-right: <?php echo get_option($dirname.'_logo_right'); ?>px;<?php } ?><?php if(get_option($dirname.'_logo_bottom')) { ?> margin-bottom: <?php echo get_option($dirname.'_logo_bottom'); ?>px;<?php } ?><?php if(get_option($dirname.'_logo_left')) { ?> margin-left: <?php echo get_option($dirname.'_logo_left'); ?>px;<?php } ?>">
-			
-				<span class="logo-details"><?php bloginfo('name'); ?> | <?php is_home() || is_front_page() ? bloginfo('description') : wp_title(''); ?></span>
-			
-				<a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>"><img src="<?php if(get_option($dirname.'_logo')) { echo(get_option($dirname.'_logo')); } else { echo get_template_directory_uri(); ?>/lib/images/logo.png<?php } ?>" width="<?php if(get_option($dirname.'_logo_width')) { echo get_option($dirname.'_logo_width'); } else { echo "108"; } ?>" height="<?php if(get_option($dirname.'_logo_height')) { echo get_option($dirname.'_logo_height'); } else { echo "25"; } ?>" alt="<?php bloginfo('name'); ?>" /></a>
-			
-			</<?php if($gp_settings['title'] == "Show") { ?>div<?php } else { ?>h1<?php } ?>>
-		
-			<!-- END LOGO -->	
-									
+		<div id="header" class="col-sm-12">
+
+			<div class="col-sm-2 text-center">
+				J'aime pas cuisiner
+			</div>
 			
 			<!-- BEGIN NAV WRAPPER -->	
 			
