@@ -13,10 +13,7 @@
 <title><?php bloginfo('name'); ?> | <?php is_home() || is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-  <!-- Bootstrap -->
-  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
   <script src="bootstrap/js/bootstrap.min.js"></script>
 <?php require(gp_inc . 'options.php'); ?>
 <?php require(gp_inc . 'page-settings.php'); ?>
@@ -38,7 +35,7 @@
  
  
 		<!-- BEGIN HEADER -->
-	
+	<div class="row">
 		<div id="header" class="col-sm-12">
 
 			<div class="col-sm-2 text-center">
@@ -91,6 +88,7 @@
 			<!-- END NAV -->
 		
 			
+		</div>
 		</div>
 	
 		<!-- END HEADER -->
