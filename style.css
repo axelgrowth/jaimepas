@@ -40,11 +40,66 @@ Tags: buddypress, two-column, grey, dark
 	padding-left: 0px;
 }
 
+.btn-primary{
+	background-color: #32b14f;
+	border-color: #13773c;
+}
+
+
+.btn-info{
+	background-color: #ffffff;
+	border-color:#afb1b2;
+	color: #afb1b2;
+}
+
+
+.btn-primary:hover,
+   .btn-primary:focus {
+   		background-color: #009547;
+		border-color: #017234;
+
+
+   	}
+
+   	.btn-info:hover,
+   	   .btn-info:focus {
+   	   		background-color: #F8F8F9;
+   			border-color: #a5a5a5;
+   			color: #a5a5a5;
+
+
+   	   	}
 
 
 .searchhome{
 	margin-top: 100px;
 }
+
+#searchsubmit
+{    
+        visibility: hidden;
+    }
+
+.col-sm-12{
+	padding-right: 0px;
+	padding-left: 0px;
+	
+}
+
+
+.top-recettes{
+	border: 1px solid #a5a5a5;
+	height:400px;
+	border-radius: 1px;
+	margin-right: 40px;
+}
+
+
+
+
+
+
+
 
 
 
@@ -439,8 +494,6 @@ box-sizing: border-box;
 
 /* Content Wrapper */
 #content-wrapper {
-float: left;
-width: 100%;
 -webkit-border-bottom-right-radius: 8px;
 -webkit-border-bottom-left-radius: 8px;
 -moz-border-radius-bottomright: 8px;

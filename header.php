@@ -61,14 +61,17 @@
 					<div id="bp-buttons">
 				
 						<?php if(is_user_logged_in()) { ?>	
-										
-							<a href="<?php echo wp_logout_url(esc_url($_SERVER['REQUEST_URI'])); ?>"><button class="btn btn-warning"><?php _e('Deconnexion', 'gp_lang'); ?></button></a>
+							
+
+							<a href=<?php echo bp_loggedin_user_domain(); ?>><button class="btn btn-primary"><?php _e('Mon Profil', 'gp_lang'); ?></button></a>	
+							<!-- <a href="<?php echo wp_logout_url(esc_url($_SERVER['REQUEST_URI'])); ?>"><button class="btn btn-warning"><?php _e('Deconnexion', 'gp_lang'); ?></button></a> -->
 	
 						<?php } else { ?>
+							<?php if(bp_get_signup_allowed()) { ?><a href="<?php echo bp_get_signup_page(false); ?>"> <button class="btn btn-info"><?php _e('S&#39;inscrire', 'gp_lang'); ?></button></a><?php } ?>
+
+							<a href="<?php if(get_option($dirname."_login_url")) { echo get_option($dirname."_login_url"); } else { echo wp_login_url(); } ?>"> <button class="btn btn-primary"><?php _e('Se Connecter', 'gp_lang'); ?></button></a>
 						
-							<a href="<?php if(get_option($dirname."_login_url")) { echo get_option($dirname."_login_url"); } else { echo wp_login_url(); } ?>"> <button class="btn btn-primary"><?php _e('Connexion', 'gp_lang'); ?></button></a>
-						
-							<?php if(bp_get_signup_allowed()) { ?><a href="<?php echo bp_get_signup_page(false); ?>"> <button class="btn btn-primary"><?php _e('Inscription', 'gp_lang'); ?></button></a><?php } ?>
+							
 						
 						<?php } ?>
 				
@@ -97,6 +100,6 @@
 			
 			<!-- BEGIN LEFT CONTENT WRAPPER -->
 			
-			<div id="left-content-wrapper">		
+			<div id="">		
 
 <?php } ?>			
