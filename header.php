@@ -12,9 +12,8 @@
 <meta charset=<?php bloginfo('charset'); ?> />
 <title><?php bloginfo('name'); ?> | <?php is_home() || is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
-  <script src="bootstrap/js/bootstrap.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />	
 <?php require(gp_inc . 'options.php'); ?>
 <?php require(gp_inc . 'page-settings.php'); ?>
 <?php if(get_option($dirname.'_responsive') == "0") { ?><meta name="viewport" content="width=device-width, initial-scale=1"><?php } ?>
@@ -31,27 +30,24 @@
 
 	<!-- BEGIN PAGE WRAPPER-->
  
-	<div id="page-wrapper" class="container-fluid fill">
- 
+	
+ 	
+ 	<div class="container-fluid fill header">
  
 		<!-- BEGIN HEADER -->
 	<div class="row">
 		<div id="header" class="col-sm-12">
 
-			<div class="col-sm-2 text-center">
-				J'aime pas cuisiner
+			<div class="col-sm-4 text-left col-sm-offset-1">
+				<a href="http://datactive.net/wordpress/" style="text-decoration:none;">J'aime pas cuisiner</a>
 			</div>
 			
 			<!-- BEGIN NAV WRAPPER -->	
 			
-			<div id="nav">
-
+			<div class="col-sm-3  col-sm-offset-4 text-center">
 			
 				<!-- BEGIN NAV -->	
 			
-				<?php wp_nav_menu(array('theme_location' => 'main-nav', 'sort_column' => 'menu_order', 'container' => 'ul', 'fallback_cb' => 'null')); ?>
-	
-				<?php wp_nav_menu(array('theme_location' => 'main-nav', 'sort_column' => 'menu_order', 'container' => '', 'items_wrap' => '<select>%3$s</select>', 'fallback_cb' => 'null', 'walker' => new gp_mobile_menu)); ?>
 			
 				<!-- END NAV -->	
 			
@@ -66,13 +62,13 @@
 				
 						<?php if(is_user_logged_in()) { ?>	
 										
-							<a href="<?php echo wp_logout_url(esc_url($_SERVER['REQUEST_URI'])); ?>" class="bp-button login-button"><?php _e('Logout', 'gp_lang'); ?></a>
+							<a href="<?php echo wp_logout_url(esc_url($_SERVER['REQUEST_URI'])); ?>"><button class="btn btn-warning"><?php _e('Deconnexion', 'gp_lang'); ?></button></a>
 	
 						<?php } else { ?>
 						
-							<a href="<?php if(get_option($dirname."_login_url")) { echo get_option($dirname."_login_url"); } else { echo wp_login_url(); } ?>" class="bp-button login-button"><?php _e('Login', 'gp_lang'); ?></a>
+							<a href="<?php if(get_option($dirname."_login_url")) { echo get_option($dirname."_login_url"); } else { echo wp_login_url(); } ?>"> <button class="btn btn-primary"><?php _e('Connexion', 'gp_lang'); ?></button></a>
 						
-							<?php if(bp_get_signup_allowed()) { ?><a href="<?php echo bp_get_signup_page(false); ?>" class="bp-button signup-button"><?php _e('Sign Up', 'gp_lang'); ?></a><?php } ?>
+							<?php if(bp_get_signup_allowed()) { ?><a href="<?php echo bp_get_signup_page(false); ?>"> <button class="btn btn-primary"><?php _e('Inscription', 'gp_lang'); ?></button></a><?php } ?>
 						
 						<?php } ?>
 				
@@ -83,11 +79,11 @@
 				<!-- END LOGIN/REGISTER -->
 		
 		
-			</div>
 		
 			<!-- END NAV -->
 		
-			
+		</div>	
+		</div>
 		</div>
 		</div>
 	

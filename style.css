@@ -11,6 +11,49 @@ Tags: buddypress, two-column, grey, dark
 
 
 /* Page Styling */
+
+.cover{
+	background-image: url('img/cover.png');
+	background-size: cover;
+	background-position:center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	min-height: 240px;
+	color:white;
+	font-size: 30px;
+	margin-bottom: 40px;
+}
+
+/* Header */
+#header {
+	background-color: white;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color:black;
+	font-size: 30px;
+	font-family: 'Lobster Two', cursive;
+}
+
+
+.container-fluid{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+
+
+.searchhome{
+	margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+
 * {
 font-family: Helvetica, Arial, sans-serif;
 outline: none;
@@ -417,15 +460,12 @@ visibility: visible;
 #container {
 float: right;
 position: relative;
-width: 935px;
+
 -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
 box-sizing: border-box; 
 }
-.sb-both #content,
-.sb-both #container {
-width: 670px;
-}
+
 .fullwidth #content,
 .fullwidth #container {
 width: 100%;
@@ -459,10 +499,7 @@ display:none;
 
 /************************************ Header ************************************/
 
-/* Header */
-#header {
 
-}
 
 /* Logo */
 #logo {
@@ -862,6 +899,7 @@ font-weight: bold;
 .error404 #content #searchbar {
 margin-right: 5px;
 width: 200px;
+color:black;
 }
 .error404 #content #searchsubmit {
 width: auto;
@@ -2052,11 +2090,12 @@ line-height: 21px;
 /* Search Widget */
 #searchbar {
 width: 58%;
-margin-right: 2%;
+color:black;
 }
 #searchsubmit {
-width: 40%;
-padding: 8px 0;
+
+padding-right: 10px;
+padding-left: 10px;
 }
 
 /* Calendar Widget */
